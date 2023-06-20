@@ -99,10 +99,22 @@ export async function updateBlogInfo(formdata: FormData) {
   });
 }
 
-export default function uploadSingleBlog(formdata: FormData) {
-  return axios.post(routers.uploadSingleBlog.path, formdata, {
+export async function uploadSingleBlog(formdata: FormData) {
+  return await axios.post(routers.uploadSingleBlog.path, formdata, {
     headers: {
       "Content-Type": "multipart/form-data",
     },
   });
+}
+
+export async function addSingleLink(params: addSingleLinkParams) {
+  return await basicRequest(routers.addSingleLink.path, routers.addSingleLink.method, params)
+}
+
+export async function deleteSingleLink(params: deleteSingleLinkParams) {
+  return await basicRequest(
+    routers.deleteSingleLink.path,
+    routers.deleteSingleLink.method,
+    params
+  );
 }

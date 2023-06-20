@@ -10,6 +10,7 @@ import Toast from "./components/common/Toast";
 import Upload from "./components/Upload";
 import Data from "./components/Data";
 import Tag from "./components/Tag";
+import Link from "./components/Link";
 
 
 function App() {
@@ -69,6 +70,9 @@ function App() {
             <Data />
             {
               dashBoardConfig.tags ?  <Tag /> : null
+            }
+            {
+              dashBoardConfig.links ? <Link /> : null
             }
            
             {dashBoardConfig.apps.map((appInfo) => (

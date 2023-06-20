@@ -1,8 +1,8 @@
 interface dashBoardConfig {
   avatar: string;
-  username: string
+  username: string;
   host: string;
-  imagePath: string
+  imagePath: string;
   comment: boolean;
   friendLink: boolean;
   graph: boolean;
@@ -16,8 +16,8 @@ interface dashBoardConfig {
 const dashBoardConfig: dashBoardConfig = {
   avatar: "avatar.jpg",
   username: "柴犬",
-  host: 'https://www.coisini.love/api/',
-  imagePath: 'https://www.coisini.love/api/picture/',
+  host: "https://www.coisini.love/api/",
+  imagePath: "https://www.coisini.love/api/picture/",
   comment: true,
   friendLink: true,
   graph: true,
@@ -55,51 +55,85 @@ const dashBoardConfig: dashBoardConfig = {
     },
     checkLogin: {
       path: "check",
-      method: "post"
+      method: "post",
     },
     updateBlogInfo: {
       path: "/update/blog",
       method: "post",
     },
     uploadSingleBlog: {
-      path:"/upload/blog",
+      path: "/upload/blog",
       method: "post",
     },
     deleteSingleBlog: {
-      path:"/delete/blog",
+      path: "/delete/blog",
       method: "post",
     },
     deleteSingleTag: {
-      path:"/delete/tag",
+      path: "/delete/tag",
       method: "post",
     },
     addSingleTag: {
       path: "/set/tag",
       method: "post",
-    }
+    },
+    addSingleLink: {
+      path: "/set/link",
+      method: "post",
+    },
+    deleteSingleLink: {
+      path: "/delete/link",
+      method: "post",
+    },
   },
   apps: [
     {
       name: "telegram",
       url: "https://web.telegram.org/",
-      logo: "telegram.svg"
+      logo: "telegram.svg",
     },
     {
       name: "twitter",
       url: "https://twitter.com/",
-      logo: "twitter.svg"
+      logo: "twitter.svg",
     },
     {
       name: "github",
       url: "https://github.com/",
-      logo: "github-icon.svg"
+      logo: "github-icon.svg",
     },
     {
       name: "bilibili",
       url: "https://www.bilibili.com/",
-      logo: "bilibili.svg"
+      logo: "bilibili.svg",
+    },
+    {
+      name: "apple",
+      url: "https://www.apple.com.cn/cn-edu/store",
+      logo: "apple.svg"
+    },
+    {
+      name: "google",
+      url: "https://www.google.com/",
+      logo: "google.svg"
+    },
+    {
+      name: "gmail",
+      url: "https://mail.google.com/",
+      logo: "gmail.svg"
+    },
+    {
+      name: "react",
+      url: "https://react.dev/",
+      logo: "react.svg"
+    },
+    {
+      name: "vue",
+      url: "https://vuejs.org/",
+      logo: "vue.svg"
     }
-  ]
+
+  ],
 };
 
 export default dashBoardConfig;

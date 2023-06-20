@@ -17,6 +17,8 @@ declare interface router {
   deleteSingleBlog: routerType;
   deleteSingleTag: routerType;
   addSingleTag: routerType;
+  addSingleLink: routerType;
+  deleteSingleLink: routerType;
 }
 
 

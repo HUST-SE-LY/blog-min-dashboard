@@ -5,7 +5,7 @@ import uploadSVG from "../assets/upload.svg";
 import Header from "./common/Header";
 import store from "../store";
 import deleteTagSVG from "../assets/deleteTag.svg";
-import uploadSingleBlog from "../utils/requests";
+import {uploadSingleBlog} from "../utils/requests";
 
 function Upload() {
   const [showAnimate, setShowAnimate] = useState(false);
@@ -76,7 +76,7 @@ function UploadDetail(props: commonAppProps) {
   function chooseFile() {
     fileInput.current && fileInput.current.click();
   }
-  async function updateInfo() {
+  async function uploadBlog() {
     if(!(title && des && picture && tags && file)) {
       store.addToast("失败：请填写所有应填项");
       return ;
@@ -207,7 +207,7 @@ function UploadDetail(props: commonAppProps) {
         </div>
         <div className="ml-auto text-sm text-gray-300">选择博客文件</div>
         </div>
-        <div onClick={() => updateInfo()} className="relative min-h-[2rem] w-full text-center cursor-pointer border-[1px] border-blue-300 transition-all hover:text-white hover:bg-blue-500 text-sm leading-[2rem] px-[1rem] overflow-hidden rounded-2xl ">
+        <div onClick={() => uploadBlog()} className="relative min-h-[2rem] w-full text-center cursor-pointer border-[1px] border-blue-300 transition-all hover:text-white hover:bg-blue-500 text-sm leading-[2rem] px-[1rem] overflow-hidden rounded-2xl ">
           上传
         </div>
       </div>

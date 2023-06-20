@@ -18,7 +18,7 @@ declare interface getTagsRes {
 
 declare interface getLinksRes {
   data: {
-    links: Array<staticLink>
+    links: Array<linkInfo>
   }
 }
 

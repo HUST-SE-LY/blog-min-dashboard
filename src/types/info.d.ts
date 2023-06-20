@@ -12,11 +12,6 @@ declare interface tagInfo {
   name: string;
 }
 
-declare interface staticLink {
-  name: string;
-  url: string;
-}
-
 declare interface appInfo {
   name: string;
   url: string;
@@ -33,4 +28,10 @@ declare interface toastInfo {
   id: number;
   content: string;
   time: string
+}
+
+declare interface linkInfo {
+  id: number;
+  name: string;
+  url: string;
 }

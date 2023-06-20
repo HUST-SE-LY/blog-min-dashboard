@@ -81,8 +81,12 @@ function TagDetail(props: commonAppProps) {
   }
 
   async function freshTagList() {
-    const res = (await getTags()) as getTagsRes;
-    setTags(res.data.tags);
+    try {
+      const res = (await getTags()) as getTagsRes;
+      setTags(res.data.tags);
+    } catch (err) {
+      store.addToast("获取tag失败");
+    }
   }
   useEffect(() => {
     async function initTags() {

@@ -39,3 +39,12 @@ declare interface deleteSingleTagParams {
 declare interface addSingleTagParams {
   name: string;
 }
+
+declare interface addSingleLinkParams {
+  name: string;
+  url: string;
+}
+
+declare interface deleteSingleLinkParams {
+  id: number;
+}
