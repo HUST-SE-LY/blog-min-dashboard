@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { lazy, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import dashBoardConfig from "./blogDashboard";
 import Blog from "./components/Blog";
 import { observer } from "mobx-react-lite";
