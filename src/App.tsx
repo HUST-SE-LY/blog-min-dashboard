@@ -46,7 +46,7 @@ function App() {
   },[])
   return (
     <div onClick={() => setShowDashboard(true)} className="relative overflow-hidden bg-transparent flex w-screen h-screen justify-center items-center">
-      <div className="fixed p-[1rem] z-[9999] overflow-y-auto right-0 top-0 flex flex-col gap-[1rem] h-screen w-fit">
+      <div className="fixed p-[1rem] max-sm:p-0 z-[9999] overflow-y-auto max-sm:w-screen  right-0 top-0 flex flex-col gap-[1rem] h-fit w-fit">
         {
           store.toastList.map((toastInfo) => <Toast {...toastInfo} />)
         }

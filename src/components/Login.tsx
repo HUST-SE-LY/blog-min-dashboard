@@ -22,6 +22,16 @@ function Login() {
     }
   }
 
+  async function phoneIn() {
+    const res = await login({password: password}) as loginRes;
+      if(res.data.success) {
+        store.login();
+        localStorage.setItem('token', res.data.token);
+      } else {
+        setShakeAni();
+      }
+  }
+
   function setShakeAni() {
     setPassword("")
     setPasswordTrue(false);
@@ -34,6 +44,7 @@ function Login() {
     <img src={dashBoardConfig.avatar} className="w-[80x] h-[80px] object-cover rounded-full" alt="" />
     <p className="text-white">{dashBoardConfig.username}</p>
     <input value={password} onChange={(e) => setPassword(e.target.value)} onKeyUp={(e) => signIn(e)} type="password" placeholder="输入密码" className={ `${passwordTrue ? "" : "animate-shake"} placeholder:text-[16px] placeholder:text-white/50 placeholder:leading-[40px]  h-[40px] bg-white/50 text-white/70 outline-none rounded-xl px-[1em]`} />
+    <button onClick={() => phoneIn()} className="hidden max-md:block py-[0.2rem] px-[1rem] bg-white/50 text-white/70 text-[12px] rounded-full">进入</button>
   </div>
 }
 
