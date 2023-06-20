@@ -25,7 +25,7 @@ function Blog() {
           onClick={(e) => {
             initApp(e);
           }}
-          className="cursor-pointer flex justify-center items-center w-[80px] relative h-[80px] rounded-[20px] bg-white"
+          className="cursor-pointer flex justify-center items-center max-sm:w-[50px] max-sm:h-[50px] max-sm:rounded-[15px] w-[80px] relative h-[80px] rounded-[20px] bg-white"
         >
           <div
             onClick={(e) => {
@@ -35,7 +35,7 @@ function Blog() {
               showAnimate ? "bg-white scale-x-[3000] scale-y-[1500]" : "scale-0"
             } ${showApp ? "" : "z-[9999]"}`}
           ></div>
-          <img src={blogSVG} className={`transition-all delay-[250ms] ${showAnimate ? "opacity-0 scale-[2] rotate-45" : "opacity-[1] scale-[1]"}`} alt="" />
+          <img src={blogSVG} className={`max-sm:w-[30px] max-sm:h-[30px] transition-all delay-[250ms] ${showAnimate ? "opacity-0 scale-[2] rotate-45" : "opacity-[1] scale-[1]"}`} alt="" />
         </div>
         <p className="text-white text-sm">博客</p>
       </div>
@@ -103,7 +103,7 @@ function BlogDetail(props: commonAppProps) {
         title="博客管理"
       />
       <div className="h-[calc(100vh_-_50px)] w-full overflow-y-auto">
-        <div className="grid grid-cols-4 gap-[10px] items-center justify-items-center">
+        <div className="grid grid-cols-4 max-sm:grid-cols-2 max-md:grid-cols-3 gap-[10px] items-center justify-items-center">
           {blogList.map((blogInfo) => (
             <SingleBlog
               setCurrentBlog={setCurrentBlog}
@@ -117,7 +117,7 @@ function BlogDetail(props: commonAppProps) {
         {isBottom ? null : (
           <div
             ref={bottom}
-            className="w-full h-full grid grid-cols-4 gap-[10px] items-center justify-items-center"
+            className="w-full h-full grid max-sm:grid-cols-2 max-md:grid-cols-3 grid-cols-4 gap-[10px] items-center justify-items-center"
           >
             {initList.map((index) => (
               <div
@@ -275,12 +275,12 @@ function SingleBlogInfo(props: singleBlogInfoProps) {
             修改简介
           </div>
         </div>
-        <div className="relative flex items-center gap-[0.5rem] px-[1rem] py-[0.5rem] border-[1px] border-gray-200 rounded-xl">
+        <div className="relative flex overflow-x-auto flex-wrap items-center gap-[1.5rem] px-[1rem] py-[0.5rem] border-[1px] border-gray-200 rounded-xl">
           <div className="flex gap-[0.5rem]">
             {tags.map((tagInfo) => (
               <div
                 key={tagInfo.name}
-                className="flex items-center text-sm gap-[0.5rem] py-[2px] pl-[1rem] rounded-full border-[1px] border-blue-200"
+                className="flex flex-shrink-0 items-center text-sm gap-[0.5rem] py-[2px] pl-[1rem] rounded-full border-[1px] border-blue-200"
               >
                 <div className="">{tagInfo.name}</div>
                 <img
@@ -296,10 +296,10 @@ function SingleBlogInfo(props: singleBlogInfoProps) {
             placeholder="回车添加标签"
             value={currentTag}
             onKeyUp={(e) => addTag(e)}
-            className="outline-none text-sm"
+            className="outline-none text-sm flex-shrink-0"
             onChange={(e) => setCurrentTag(e.target.value)}
           />
-          <div className="ml-auto text-sm text-gray-300">修改标签</div>
+          <div className="ml-auto flex-shrink-0 text-sm text-gray-300">修改标签</div>
         </div>
         <div className="w-full relative border-[1px] rounded-2xl px-[1rem] py-[0.5rem] border-gray-200 flex items-center">
           <div className="relative flex items-center gap-[1rem]">

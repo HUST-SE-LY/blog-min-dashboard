@@ -24,7 +24,7 @@ function Upload() {
           onClick={(e) => {
             initApp(e);
           }}
-          className="cursor-pointer flex justify-center items-center w-[80px] relative h-[80px] rounded-[20px] bg-white"
+          className="cursor-pointer flex justify-center items-center max-sm:w-[50px] max-sm:h-[50px] max-sm:rounded-[15px] w-[80px] relative h-[80px] rounded-[20px] bg-white"
         >
           <div
             onClick={(e) => {
@@ -34,7 +34,7 @@ function Upload() {
               showAnimate ? "bg-white scale-x-[3000] scale-y-[1500]" : "scale-0"
             } ${showApp ? "" : "z-[9999]"}`}
           ></div>
-          <img src={uploadSVG} className={`transition-all delay-[250ms] ${showAnimate ? "rotate-45 opacity-0 scale-[2]" : "opacity-[1] scale-[1]"}`} alt="" />
+          <img src={uploadSVG} className={`transition-all max-sm:w-[30px] max-sm:h-[30px] delay-[250ms] ${showAnimate ? "rotate-45 opacity-0 scale-[2]" : "opacity-[1] scale-[1]"}`} alt="" />
         </div>
         <p className="text-white text-sm">上传</p>
       </div>

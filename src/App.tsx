@@ -63,7 +63,7 @@ function App() {
         store.isLogin ? (
           <div
             onClick={(e) => {e.stopPropagation();setShowDashboard(false)}}
-            className={`w-full h-full animate-dashboardIn grid grid-cols-7 grid-rows-5 justify-items-center items-center`}
+            className={`w-full h-full animate-dashboardIn grid grid-cols-7 max-sm:grid-cols-4 max-md:grid-cols-5 grid-rows-5 justify-items-center items-center`}
           >
             <Blog />
             <Upload />
@@ -82,10 +82,10 @@ function App() {
                   href={appInfo.url}
                   target="_blank"
                 >
-                  <div className="cursor-pointer flex justify-center items-center w-[80px] relative h-[80px] rounded-[20px] bg-white">
+                  <div className="cursor-pointer flex justify-center items-center max-sm:w-[50px] max-sm:h-[50px] w-[80px] relative h-[80px] rounded-[20px] max-sm:rounded-[15px] bg-white">
                     <img
                       src={appInfo.logo}
-                      className="w-[50px] h-[50px]"
+                      className="w-[50px] h-[50px] max-sm:w-[30px] max-sm:h-[30px]"
                       alt=""
                     />
                   </div>

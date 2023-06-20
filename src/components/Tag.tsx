@@ -24,7 +24,7 @@ function Tag() {
           onClick={(e) => {
             initApp(e);
           }}
-          className="cursor-pointer flex justify-center items-center w-[80px] relative h-[80px] rounded-[20px] bg-white"
+          className="cursor-pointer flex justify-center items-center max-sm:w-[50px] max-sm:h-[50px] max-sm:rounded-[15px] w-[80px] relative h-[80px] rounded-[20px] bg-white"
         >
           <div
             onClick={(e) => {
@@ -36,7 +36,7 @@ function Tag() {
           ></div>
           <img
             src={tagSVG}
-            className={`transition-all delay-[250ms] ${
+            className={`transition-all delay-[250ms] max-sm:w-[30px] max-sm:h-[30px] ${
               showAnimate ? "opacity-0 scale-[2] rotate-45" : "opacity-[1] scale-[1]"
             }`}
             alt=""
