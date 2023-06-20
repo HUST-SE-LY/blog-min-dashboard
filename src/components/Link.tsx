@@ -113,10 +113,10 @@ function LinkDetail(props: commonAppProps) {
       <div className="h-[calc(100vh_-_50px)] w-full overflow-y-auto p-[1rem]">
         <div className="flex flex-col gap-[1rem]">
           {linkList.map((linkInfo) => (
-            <div className="flex gap-[1rem] group items-center ">
+            <div key={linkInfo.id} className="flex non-scrollbar overflow-x-auto gap-[1rem] group items-center ">
               <div className="w-[100px] px-[1rem] py-[0.2rem] rounded group-hover:bg-blue-200 flex-shrink-0">{linkInfo.name}</div>
-              <a href={linkInfo.url} className="hover:text-blue-500 px-[1rem] py-[0.2rem] rounded group-hover:bg-blue-200 transition-all">{linkInfo.url}</a>
-              <button onClick={() => deleteLink(linkInfo.id)} className=" ml-auto w-fit py-[0.2rem] px-[2rem] rounded-xl bg-blue-500 transition-all hover:bg-blue-600 text-white">删除</button>
+              <a href={linkInfo.url} className="hover:text-blue-500 w-[250px] flex-shrink-0 px-[1rem] py-[0.2rem] rounded group-hover:bg-blue-200 transition-all">{linkInfo.url}</a>
+              <button onClick={() => deleteLink(linkInfo.id)} className="flex-shrink-0 ml-auto w-fit py-[0.2rem] px-[2rem] rounded-xl bg-blue-500 transition-all hover:bg-blue-600 text-white">删除</button>
             </div>
           ))}
           <div className="relative">
