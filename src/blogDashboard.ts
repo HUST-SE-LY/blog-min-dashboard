@@ -85,6 +85,10 @@ const dashBoardConfig: dashBoardConfig = {
       path: "/delete/link",
       method: "post",
     },
+    getAllDates: {
+      path: "/get/allDate",
+      method: "post",
+    }
   },
   apps: [
     {

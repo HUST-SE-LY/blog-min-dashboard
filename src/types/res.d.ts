@@ -22,6 +22,12 @@ declare interface getLinksRes {
   }
 }
 
+declare interface getAllDatesRes {
+  data: {
+    dates: Array<dateInfo>
+  }
+}
+
 declare interface getCommentsRes {
   data: {
     list: commentInfo[];

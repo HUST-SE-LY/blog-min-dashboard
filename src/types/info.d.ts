@@ -35,3 +35,7 @@ declare interface linkInfo {
   name: string;
   url: string;
 }
+
+declare interface dateInfo {
+  date: string;
+}

@@ -19,6 +19,7 @@ declare interface router {
   addSingleTag: routerType;
   addSingleLink: routerType;
   deleteSingleLink: routerType;
+  getAllDates: routerType;
 }
 
 

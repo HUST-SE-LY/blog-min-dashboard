@@ -118,3 +118,7 @@ export async function deleteSingleLink(params: deleteSingleLinkParams) {
     params
   );
 }
+
+export async function getAllDates() {
+  return await basicRequest(routers.getAllDates.path, routers.getAllDates.method);
+}
