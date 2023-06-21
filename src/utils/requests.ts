@@ -122,3 +122,11 @@ export async function deleteSingleLink(params: deleteSingleLinkParams) {
 export async function getAllDates() {
   return await basicRequest(routers.getAllDates.path, routers.getAllDates.method);
 }
+
+export async function deleteSingleComment(params: deleteSingleCommentParams) {
+  return await basicRequest(
+    routers.deleteSingleComment.path,
+    routers.deleteSingleComment.method,
+    params
+  );
+}

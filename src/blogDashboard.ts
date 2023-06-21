@@ -54,7 +54,7 @@ const dashBoardConfig: dashBoardConfig = {
       method: "post",
     },
     checkLogin: {
-      path: "check",
+      path: "/check",
       method: "post",
     },
     updateBlogInfo: {
@@ -87,6 +87,10 @@ const dashBoardConfig: dashBoardConfig = {
     },
     getAllDates: {
       path: "/get/allDate",
+      method: "post",
+    },
+    deleteSingleComment: {
+      path: "/delete/comment",
       method: "post",
     }
   },

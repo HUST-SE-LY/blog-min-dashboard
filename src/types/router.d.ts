@@ -20,6 +20,7 @@ declare interface router {
   addSingleLink: routerType;
   deleteSingleLink: routerType;
   getAllDates: routerType;
+  deleteSingleComment: routerType;
 }
 
 

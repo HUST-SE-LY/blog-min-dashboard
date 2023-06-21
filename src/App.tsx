@@ -67,7 +67,9 @@ function App() {
           >
             <Blog />
             <Upload />
-            <Data />
+            {
+              dashBoardConfig.graph ? <Data /> : null
+            }
             {
               dashBoardConfig.tags ?  <Tag /> : null
             }

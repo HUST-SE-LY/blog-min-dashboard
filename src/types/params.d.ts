@@ -48,3 +48,7 @@ declare interface addSingleLinkParams {
 declare interface deleteSingleLinkParams {
   id: number;
 }
+
+declare interface deleteSingleCommentParams {
+  id: number;
+}
