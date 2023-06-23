@@ -130,3 +130,28 @@ export async function deleteSingleComment(params: deleteSingleCommentParams) {
     params
   );
 }
+
+export async function getFriendLinkList() {
+  return await basicRequest(routers.getFriendLinkList.path, routers.getFriendLinkList.method);
+}
+
+export async function getUnreadFriendLink() {
+  return await basicRequest(routers.getUnreadFriendLink.path, routers.getUnreadFriendLink.method);
+}
+
+export async function deleteSingleFriendLink(params: deleteSingleFriendLinkParams) {
+  return await basicRequest(
+    routers.deleteSingleFriendLink.path,
+    routers.deleteSingleFriendLink.method,
+    params
+  );
+}
+
+export async function passSingleFriendLink(params: passSingleFriendLinkParams) {
+  return await basicRequest(
+    routers.passSingleFriendLink.path,
+    routers.passSingleFriendLink.method,
+    params
+  );
+}
+

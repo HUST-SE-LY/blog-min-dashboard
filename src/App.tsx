@@ -11,6 +11,7 @@ import Upload from "./components/Upload";
 import Data from "./components/Data";
 import Tag from "./components/Tag";
 import Link from "./components/Link";
+import FriendLink from "./components/FriendLink";
 
 
 function App() {
@@ -75,6 +76,9 @@ function App() {
             }
             {
               dashBoardConfig.links ? <Link /> : null
+            }
+            {
+              dashBoardConfig.friendLink ? <FriendLink />: null
             }
            
             {dashBoardConfig.apps.map((appInfo) => (

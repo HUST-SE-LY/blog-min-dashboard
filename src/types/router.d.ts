@@ -21,6 +21,10 @@ declare interface router {
   deleteSingleLink: routerType;
   getAllDates: routerType;
   deleteSingleComment: routerType;
+  getFriendLinkList: routerType;
+  getUnreadFriendLink: routerType;
+  deleteSingleFriendLink: routerType;
+  passSingleFriendLink: routerType;
 }
 
 

@@ -47,3 +47,9 @@ declare interface checkLoginRes {
   }
 }
 
+declare interface getFriendLinkListRes {
+  data: {
+    list: friendLinkInfo[];
+  }
+}
+

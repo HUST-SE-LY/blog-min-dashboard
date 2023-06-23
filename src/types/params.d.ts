@@ -52,3 +52,11 @@ declare interface deleteSingleLinkParams {
 declare interface deleteSingleCommentParams {
   id: number;
 }
+
+declare interface deleteSingleFriendLinkParams {
+  id: number;
+}
+
+declare interface passSingleFriendLinkParams {
+  id: number;
+}

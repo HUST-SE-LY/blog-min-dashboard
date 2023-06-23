@@ -31,7 +31,7 @@ function Upload() {
               e.stopPropagation();
             }}
             className={` transition-all duration-500 bg-transparent w-[1px] h-[1px] absolute top-[40px] left-[40px] ${
-              showAnimate ? "bg-white scale-x-[3000] scale-y-[1500]" : "scale-0"
+              showAnimate ? "bg-white scale-x-[4000] scale-y-[2000]" : "scale-0"
             } ${showApp ? "" : "z-[9999]"}`}
           ></div>
           <img src={uploadSVG} className={`transition-all max-sm:w-[30px] max-sm:h-[30px] delay-[250ms] ${showAnimate ? "rotate-45 opacity-0 scale-[2]" : "opacity-[1] scale-[1]"}`} alt="" />

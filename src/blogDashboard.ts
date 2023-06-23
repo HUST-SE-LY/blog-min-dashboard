@@ -92,6 +92,22 @@ const dashBoardConfig: dashBoardConfig = {
     deleteSingleComment: {
       path: "/delete/comment",
       method: "post",
+    },
+    getFriendLinkList: {
+      path: "/link/getLink",
+      method: "post",
+    },
+    getUnreadFriendLink: {
+      path: "/link/getRequest",
+      method: "post"
+    },
+    deleteSingleFriendLink: {
+      path: "/link/delete",
+      method: "post",
+    },
+    passSingleFriendLink: {
+      path: "/link/pass",
+      method: "post",
     }
   },
   apps: [

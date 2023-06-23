@@ -39,7 +39,7 @@ function Blog() {
               e.stopPropagation();
             }}
             className={` transition-all duration-500 bg-transparent w-[1px] h-[1px] absolute top-[40px] left-[40px] ${
-              showAnimate ? "bg-white scale-x-[3000] scale-y-[1500]" : "scale-0"
+              showAnimate ? "bg-white scale-x-[4000] scale-y-[2000]" : "scale-0"
             } ${showApp ? "" : "z-[9999]"}`}
           ></div>
           <img
@@ -71,11 +71,11 @@ function BlogDetail(props: commonAppProps) {
   const [showSingleBlogInfo, setShowSingleBlogInfo] = useState(false);
   const [currentBlog, setCurrentBlog] = useState<blogInfo>();
   const bottom = useRef<HTMLDivElement>(null);
-  const limit = 18;
+  const limit = 16;
   let offset = 0;
   const initList: number[] = [];
 
-  for (let i = 0; i < 18; i++) {
+  for (let i = 0; i < 16; i++) {
     initList.push(i);
   }
   const updateBlogList = async () => {
@@ -102,7 +102,7 @@ function BlogDetail(props: commonAppProps) {
         if (entries[0].intersectionRatio > 0) {
           await updateBlogList();
         }
-      });
+      })
       observer.observe(bottom.current);
     }
   }, []);
@@ -155,7 +155,7 @@ function BlogDetail(props: commonAppProps) {
 
 function SingleBlog(props: singleBlogProps) {
   return (
-    <div className="animate-blogIn flex h-[180px] justify-center items-center flex-col gap-[10px]">
+    <div className="animate-blogIn flex h-[calc((100vh_-_50px)_/_4)] justify-center items-center flex-col gap-[10px]">
       <div
         onClick={() => {
           props.setCurrentBlog({
@@ -285,7 +285,7 @@ function SingleBlogInfo(props: singleBlogInfoProps) {
   return (
     <div
       onClick={() => props.setShowSingleBlogInfo(false)}
-      className=" animate-fadeIn fixed flex justify-center items-center w-screen h-screen bg-white/50 z-[5] top-0 left-0"
+      className="animate-fadeIn fixed flex justify-center items-center w-screen h-screen bg-white/50 z-[5] top-0 left-0"
     >
       <div
         onClick={(e) => e.stopPropagation()}

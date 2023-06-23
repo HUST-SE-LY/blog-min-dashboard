@@ -39,3 +39,11 @@ declare interface linkInfo {
 declare interface dateInfo {
   date: string;
 }
+
+declare interface friendLinkInfo {
+  name: string;
+  content: string;
+  url: string;
+  id: number;
+  isPass: number;
+}

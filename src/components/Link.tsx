@@ -31,7 +31,7 @@ function Link() {
               e.stopPropagation();
             }}
             className={` transition-all duration-500 bg-transparent w-[1px] h-[1px] absolute top-[40px] left-[40px] ${
-              showAnimate ? "bg-white scale-x-[3000] scale-y-[1500]" : "scale-0"
+              showAnimate ? "bg-white scale-x-[4000] scale-y-[2000]" : "scale-0"
             } ${showApp ? "" : "z-[9999]"}`}
           ></div>
           <img
